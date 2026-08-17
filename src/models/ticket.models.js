@@ -15,6 +15,11 @@ const TicketSchema = new Schema(
             enum: ["pending", "accepted", "rejected", "redeemed", "expired"],
             default: "pending"
         },
+        message: {
+            type: String,
+            required: true,
+            trim: true
+        },
         validTill: {
             type: Date,
             required: true 
